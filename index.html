@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Toss Game</title>
+</head>
+<body>
+    <h1>Coin Toss Game</h1>
+    <p>Click the button below to toss the coin.</p>
+    <button id="tossButton">Toss Coin</button>
+    <p id="result"></p>
+
+    <script>
+        // Function to simulate a coin toss
+        function tossCoin() {
+            // Generate a random number (0 or 1)
+            const randomNum = Math.floor(Math.random() * 2);
+
+            // Use the random number to determine the result (0 for Heads, 1 for Tails)
+            const result = randomNum === 0 ? "Heads" : "Tails";
+
+            // Display the result
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `The coin landed on ${result}.`;
+        }
+
+        // Add a click event listener to the toss button
+        const tossButton = document.getElementById("tossButton");
+        tossButton.addEventListener("click", tossCoin);
+    </script>
+</body>
+</html>
